@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--
+    PAGE METADATA
+    Foundever | Handle the Complexity Self-Service Leaves Behind        — e.g. "Foundever Insurance | Keep Your Brand Promise to Your Policyholders"
+    Managed services that keep your brand's promise to your customers, combining AI, operations, and delivery to turn complex service moments into loyalty.  — meta description, ~150 chars, outcome-led
+  -->
+  <title>Foundever | Handle the Complexity Self-Service Leaves Behind</title>
+  <meta name="description" content="Managed services that keep your brand's promise to your customers, combining AI, operations, and delivery to turn complex service moments into loyalty.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=22">
+</head>
+<body>
+
+  <!-- ===== HEADER (mostly brand-static; nav anchors stay the same) ===== -->
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">foundever<span>&trade;</span></div>
+      <nav class="nav-links">
+        <a href="#value-props">Results</a>
+        <a href="#solutions">Solutions</a>
+        <a href="#insights">Insights</a>
+        <a href="#cta" class="btn btn-primary" style="padding:10px 22px; font-size:13px;">Book a Session</a>
+      </nav>
+    </div>
+  </header>
+
+  <!--
+    ============================================================
+    HERO
+    Fill placeholders with vertical-specific positioning.
+    assets/Hero-image-3.png        — hero photo path (operator-on-call or vertical-relevant)
+    Foundever customer experience specialist    — alt text
+    Enterprise CX      — short tag, e.g. "Insurance CX", "Telco CX", "Banking CX"
+    Handling the complexity    — emotional second-person headline (line 1)
+    self-service leaves behind    — completion of the H1 thought (line 2)
+    for your customers           — finishes the brand promise, names the buyer's customer (e.g. "to your policyholders" / "to your subscribers")
+    Managed services that keep your brand's promise to your customers, powered by human judgment, AI at scale, and audit ready delivery.     — outcome-led one-liner. No em-dashes, no hyphens in compound modifiers.
+    Find your CX blindspots — main CTA, action verb. e.g. "Find your CX blindspots"
+    #cta  — typically "#cta"
+    Let's talk      — usually "Let's talk" or "Talk to sales"
+    #       — sales link or "#"
+    45 minute session  — trust signal, e.g. "45 minute session"
+    Benchmarked against top enterprises  — trust signal, e.g. "Benchmarked against top carriers"
+    ============================================================
+  -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <img src="assets/Hero-image-3.png" alt="Foundever customer experience specialist">
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="container">
+      <div class="hero-content">
+        <span class="eyebrow hero-eyebrow">Enterprise CX</span>
+        <div class="hero-heading-block">
+          <h1>Handling the complexity<br>self-service leaves behind</h1>
+          <h2 class="hero-h2">for your customers</h2>
+        </div>
+        <p>Managed services that keep your brand's promise to your customers, powered by human judgment, AI at scale, and audit ready delivery.</p>
+        <div class="hero-cta-group">
+          <a href="#cta" class="btn btn-cta-primary">
+            Find your CX blindspots
+            <span class="arrow">&rarr;</span>
+          </a>
+          <a href="#" class="btn btn-dark">Let's talk</a>
+        </div>
+        <p class="hero-microcopy">&#10003; 45 minute session &nbsp;|&nbsp; &#10003; Benchmarked against top enterprises</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!--
+    ============================================================
+    STATS (combined: scale flex on top, outcome stats on bottom)
+    Top zone: 1 headline + 2 large scale numbers (total brand flex)
+    Bottom zone: 4 outcome stats (each picks up a different panel buyer)
+
+    Volume isn't the challenge. Complexity is, and interactions are higher stakes than ever.            — outcome statement, e.g. "Better and more compliant customer outcomes, with a lower cost to serve"
+
+    SCALE STATS (top)
+    +        — usually "+" (or empty)
+    150               — counter target value, integer (e.g. "10")
+    K        — e.g. "K" or "M" or empty
+    agents worldwide             — e.g. "insurance associates worldwide"
+    +        — usually "+"
+    800               — counter target (e.g. "55")
+            — usually empty
+    brands trust Foundever             — e.g. "insurance brands supported globally"
+
+    OUTCOME STATS (bottom — 4 cards, each maps to a panel buyer)
+    Slot 1: typically operator credibility (COO/CRO) — ramp/peak/event-response
+    Slot 2: typically efficiency/cost (CFO/COO)
+    Slot 3: typically compliance/audit (CRO/Head of Conduct)
+    Slot 4: typically CCO/customer outcome (NPS, complaints, retention)
+
+    Each slot:
+    {{OUTCOME_N_NUM}}        — full number string (e.g. "X weeks", "10–30%", "+95%", "+X pts NPS")
+                              if you want count-up animation, use this pattern:
+                              <span class="count-up" data-target="50">0</span>%
+    {{OUTCOME_N_LABEL}}      — short descriptor that completes the stat (e.g. "to stand up specialist capacity for peak events and CAT season")
+
+    Find your CX blindspots      — e.g. "Find your CX blindspots"
+    #cta       — usually "#cta"
+    ============================================================
+  -->
+  <section class="insurance-stats" id="value-props">
+    <div class="container">
+
+      <!-- Top zone: headline + 2 big scale stats -->
+      <div class="istats-top">
+        <h2 class="istats-headline">Volume isn't the challenge. Complexity is, and interactions are higher stakes than ever.</h2>
+        <div class="istats-scale-item">
+          <div class="istats-scale-num">+<span class="count-up" data-target="150">0</span>K</div>
+          <div class="istats-scale-lbl">agents worldwide</div>
+        </div>
+        <div class="istats-scale-item">
+          <div class="istats-scale-num">+<span class="count-up" data-target="800">0</span></div>
+          <div class="istats-scale-lbl">brands trust Foundever</div>
+        </div>
+      </div>
+
+      <div class="istats-divider"></div>
+
+      <!-- Bottom zone: 4 outcome stats -->
+      <div class="istats-outcomes">
+        <div class="istats-outcome">
+          <div class="istats-outcome-num"><span class="count-up" data-target="45">0</span></div>
+          <div class="istats-outcome-lbl">worldwide operations, ready to flex to volume and seasonal peaks</div>
+        </div>
+        <div class="istats-outcome">
+          <div class="istats-outcome-num">&darr;<span class="count-up" data-target="28">0</span>%</div>
+          <div class="istats-outcome-lbl">lower average handle time through right shoring, automation, and AI augmented agents</div>
+        </div>
+        <div class="istats-outcome">
+          <div class="istats-outcome-num"><span class="count-up" data-target="93">0</span>%</div>
+          <div class="istats-outcome-lbl">agent retention, keeping service consistent through every peak</div>
+        </div>
+        <div class="istats-outcome">
+          <div class="istats-outcome-num">&darr;<span class="count-up" data-target="27">0</span>%</div>
+          <div class="istats-outcome-lbl">lower customer effort as AI and analytics close the tech gap</div>
+        </div>
+      </div>
+
+      <div class="stats-cta">
+        <a href="#cta" class="btn btn-primary">Find your CX blindspots <span class="arrow">&rarr;</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!--
+    ============================================================
+    SOLUTIONS (4 capability cards in a tabbed rolling bar)
+    Each card maps to one capability theme of the vertical.
+    Insurance defaults: Acquisition & retention | Claims management | Policy servicing | Financial crime & compliance
+    Telco might be: Acquisition | Network support | Billing & retention | Fraud & compliance
+    Banking might be: Onboarding | Servicing | Collections | Financial crime
+
+    Per card N (1-4):
+    {{SOL_N_TAB}}      — short tab label (2-4 words)
+    {{SOL_N_EYEBROW}}  — same as tab or slight variation
+    {{SOL_N_TITLE}}    — verb-led card headline
+    {{SOL_N_DESC}}     — 2-3 sentence buyer-facing description
+    {{SOL_N_PILL_1..5}}— 5 capability pills
+    {{SOL_N_CTA_HREF}} — card CTA link
+    {{SOL_N_PHOTO}}    — image path
+    {{SOL_N_PHOTO_ALT}}— image alt text
+
+    Our approach    — usually "Our expertise"
+    Combine AI, operations, and delivery to turn complexity into outcomes   — e.g. "Reduce your servicing burden and overhead costs"
+    We own the execution layer so you can own the strategy, configured to your operation and measured on results.   — one-liner setup, no em-dashes
+    Let's talk  — usually "Let's talk"
+    ============================================================
+  -->
+  <section class="solutions" id="solutions">
+    <div class="container">
+      <div class="solutions-header">
+        <span class="eyebrow">Our approach</span>
+        <h2>Combine AI, operations, and delivery to turn complexity into outcomes</h2>
+        <p>We own the execution layer so you can own the strategy, configured to your operation and measured on results.</p>
+      </div>
+
+      <div class="approach-grid">
+
+        <!-- Card 1: Service consistency (team) -->
+        <div class="approach-card approach-card--blue">
+          <h3 class="approach-card-title">Keep service consistent</h3>
+          <div class="approach-card-visual">
+            <div class="approach-visual-team">
+              <div class="team-avatar" style="--angle:0deg;"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.5" stroke="white" stroke-width="1.6"/><path d="M4.5 20c1.4-3.6 4.3-5.5 7.5-5.5s6.1 1.9 7.5 5.5" stroke="white" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+              <div class="team-avatar" style="--angle:60deg;"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.5" stroke="white" stroke-width="1.6"/><path d="M4.5 20c1.4-3.6 4.3-5.5 7.5-5.5s6.1 1.9 7.5 5.5" stroke="white" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+              <div class="team-avatar" style="--angle:120deg;"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.5" stroke="white" stroke-width="1.6"/><path d="M4.5 20c1.4-3.6 4.3-5.5 7.5-5.5s6.1 1.9 7.5 5.5" stroke="white" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+              <div class="team-avatar" style="--angle:180deg;"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.5" stroke="white" stroke-width="1.6"/><path d="M4.5 20c1.4-3.6 4.3-5.5 7.5-5.5s6.1 1.9 7.5 5.5" stroke="white" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+              <div class="team-avatar" style="--angle:240deg;"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.5" stroke="white" stroke-width="1.6"/><path d="M4.5 20c1.4-3.6 4.3-5.5 7.5-5.5s6.1 1.9 7.5 5.5" stroke="white" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+              <div class="team-avatar" style="--angle:300deg;"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.5" stroke="white" stroke-width="1.6"/><path d="M4.5 20c1.4-3.6 4.3-5.5 7.5-5.5s6.1 1.9 7.5 5.5" stroke="white" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+              <div class="team-center"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.35-9.3-8.9C1.1 8.2 3.4 5 6.7 5c2 0 3.6 1.1 4.3 2.7C11.7 6.1 13.3 5 15.3 5c3.3 0 5.6 3.2 4 7.1C16.9 16.65 12 21 12 21z" stroke="white" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
+            </div>
+          </div>
+          <p class="approach-card-desc">Retain the agents who know your brand and flex capacity around them, so service holds steady through every peak.</p>
+        </div>
+
+        <!-- Card 2: AI and analytics (unify tech) -->
+        <div class="approach-card approach-card--magenta">
+          <h3 class="approach-card-title">Close the tech gap</h3>
+          <div class="approach-card-visual">
+            <div class="approach-visual-grid">
+              <div class="tech-tile"><svg viewBox="0 0 24 24" fill="none"><path d="M4 12h2l1.5-5 3 10 2.5-7 1.5 2H20" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+              <div class="tech-tile"><svg viewBox="0 0 24 24" fill="none"><path d="M4 5h16v10H9l-4 4V15H4z" stroke="white" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
+              <div class="tech-tile"><svg viewBox="0 0 24 24" fill="none"><rect x="3.5" y="5.5" width="17" height="13" rx="1.5" stroke="white" stroke-width="1.6"/><path d="M4 6.5l8 6 8-6" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+              <div class="tech-tile"><svg viewBox="0 0 24 24" fill="none"><path d="M4 10a8 8 0 0116 0v5a2 2 0 01-2 2h-1v-6h3M4 15v-5h3v6H6a2 2 0 01-2-2z" stroke="white" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
+              <div class="tech-tile"><svg viewBox="0 0 24 24" fill="none"><path d="M8 6l-5 6 5 6M16 6l5 6-5 6" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+              <div class="tech-tile"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3l1.6 4.9L18.5 9l-4.9 1.6L12 15.5l-1.6-4.9L5.5 9l4.9-1.6L12 3z" stroke="white" stroke-width="1.4" stroke-linejoin="round"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8L19 15z" stroke="white" stroke-width="1.2" stroke-linejoin="round"/></svg></div>
+            </div>
+          </div>
+          <p class="approach-card-desc">Bring AI, analytics, and your existing stack together at the moment of the interaction, not just in a dashboard.</p>
+        </div>
+
+        <!-- Card 3: Cost to serve (value) -->
+        <div class="approach-card approach-card--orange">
+          <h3 class="approach-card-title">Lower your cost to serve</h3>
+          <div class="approach-card-visual">
+            <div class="cost-pill">
+              <span class="cost-pill-arrow">&darr;</span>
+              <span class="cost-pill-num">28%</span>
+              <span class="cost-pill-label">avg handle time</span>
+            </div>
+          </div>
+          <p class="approach-card-desc">Right shoring, automation, and AI augmented agents bring cost down without cutting corners on quality.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!--
+    ============================================================
+    CASE STUDY / PROOF (gray bg)
+    Our results    — e.g. "The proof is in the results"
+    45 worldwide operations and over 3.3 billion conversations a year turn into results for 800+ brands. Explore how enterprises like yours get more from their CX.        — short paragraph naming scale (e.g. "Explore how we have helped 800+ leading brands...")
+    See our impact   — e.g. "See our impact"
+    https://foundever.com/case-studies-hub/    — link to case studies hub
+    assets/rectangle.png       — image path
+    Foundever case study   — image alt text
+    ============================================================
+  -->
+  <section class="case-study case-study--light">
+    <div class="container">
+      <div class="case-study-inner">
+        <div class="case-study-text">
+          <h2>Our results</h2>
+          <p>45 worldwide operations and over 3.3 billion conversations a year turn into results for 800+ brands. Explore how enterprises like yours get more from their CX.</p>
+          <a href="https://foundever.com/case-studies-hub/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">See our impact <span class="arrow">&rarr;</span></a>
+        </div>
+        <div class="case-study-image">
+          <img src="assets/rectangle.png" alt="Foundever case study" style="width:100%; height:100%; object-fit:cover; border-radius:12px;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!--
+    ============================================================
+    INSIGHTS (2 content cards: 1 article + 1 eBook by default)
+    Latest insights      — usually "Latest insights"
+    CX insights     — e.g. "CX insights"
+
+    Card 1 (article):
+    Article    — e.g. "Article"
+    Why deflection isn't a CX strategy       — article title
+    Most self-service tools solve for volume. They weren't built for the moments that actually define loyalty.       — 1-2 line summary
+    FE, Foundever CX Team, Customer Experience Practice
+    #        — link to the article
+
+    Card 2 (eBook or other):
+    assets/ebook-modernizing-insurance.png       — background image path
+    eBook    — e.g. "eBook"
+    Turning complexity into a competitive advantage       — title
+    6 steps to closing the gap between your tech stack and the moments that define customer loyalty.       — 1-2 line summary
+    #        — link
+    ============================================================
+  -->
+  <section class="insights" id="insights">
+    <div class="container">
+      <span class="eyebrow">Latest insights</span>
+      <h2>CX insights</h2>
+
+      <div class="insights-grid">
+        <div class="insight-card">
+          <div class="insight-image"></div>
+          <div class="insight-body">
+            <span class="insight-category">Article</span>
+            <h4>Why deflection isn't a CX strategy</h4>
+            <p>Most self-service tools solve for volume. They weren't built for the moments that actually define loyalty.</p>
+            <div class="insight-author">
+              <div class="insight-avatar">FE</div>
+              <div>
+                <div class="insight-author-name">Foundever CX Team</div>
+                <div class="insight-author-role">Customer Experience Practice</div>
+              </div>
+            </div>
+            <a href="#" class="insight-link">Read more <span>&rarr;</span></a>
+          </div>
+        </div>
+        <div class="insight-card">
+          <div class="insight-image" style="background-image:url('assets/ebook-modernizing-insurance.png'); background-size:cover; background-position:center;"></div>
+          <div class="insight-body">
+            <span class="insight-category">eBook</span>
+            <h4>Turning complexity into a competitive advantage</h4>
+            <p>6 steps to closing the gap between your tech stack and the moments that define customer loyalty.</p>
+            <a href="#" class="insight-link">Read more <span>&rarr;</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--
+    ============================================================
+    FINAL CTA — Maturity Assessment + Sketch Mockup of Deliverable
+    Left: interactive maturity assessment (5 questions, scored). Powered by script.js.
+       Question content lives in script.js — see ASSESSMENT_QUESTIONS array there.
+    Right: sketch-style dashboard mockup (visual teaser of deliverable).
+
+    Enterprise CX Maturity Assessment    — e.g. "Insurance CX Maturity Assessment"
+    Where does your operation sit on the CX maturity curve?      — H2 question, e.g. "Where does your operation sit on the CX maturity curve?"
+    Most enterprises sit between reactive and resilient. Five questions place your operation on the curve and show you what closing the gap actually takes.       — 2-3 sentence frame
+    {{ASSESSMENT_META_1..3}}  — trust pills, e.g. "5 questions", "60 seconds", "Instant benchmark"
+    Start the benchmark— e.g. "Start the benchmark"
+    Get your full results with tailored recommendations from our CX team.— gating copy on the result screen email form
+    Retake the assessment— e.g. "Retake the assessment"
+
+    Spectrum labels (5 stages, low to high):
+    Reactive, Stabilising, Scaling, AI Assisted, Resilient
+    Defaults: Reactive, Stabilising, Scaling, AI-Assisted, Resilient
+
+    Sketch mockup placeholders:
+    {{MOCKUP_NAV_1..6}}       — sidebar nav items (set the active one by adjusting the class in HTML)
+    Get your own report          — main mockup headline, e.g. "Get your own report"
+    CX maturity benchmarked against peer enterprises       — 1-line subtitle, e.g. "CX maturity benchmarked against peer carriers"
+    82, Maturity score
+    +18%, vs peer avg
+    82      — center number on the donut
+    vs 64      — sub-label, e.g. "vs 64"
+    {{MOCKUP_LEGEND_1..3}}    — donut category labels
+    ============================================================
+  -->
+  <section class="final-cta" id="cta">
+    <div class="cta-circle cta-circle-1"></div>
+    <div class="cta-circle cta-circle-2"></div>
+    <div class="cta-circle cta-circle-3"></div>
+    <div class="container">
+      <div class="cta-layout">
+      <div class="assessment-wrap">
+        <!-- INTRO -->
+        <div class="assess-screen" id="screen-intro" data-active="true">
+          <span class="assess-eyebrow">Enterprise CX Maturity Assessment</span>
+          <h2 class="assess-title">Where does your operation sit on the CX maturity curve?</h2>
+          <p class="assess-desc">Most enterprises sit between reactive and resilient. Five questions place your operation on the curve and show you what closing the gap actually takes.</p>
+          <div class="assess-meta">
+            <span>5 questions</span>
+            <span>60 seconds</span>
+            <span>Instant benchmark</span>
+          </div>
+          <button type="button" class="assess-btn-primary" data-action="start">Start the benchmark <span class="arrow">&rarr;</span></button>
+        </div>
+
+        <!-- QUESTION (driven by script.js) -->
+        <div class="assess-screen" id="screen-question">
+          <div class="assess-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+            <div class="assess-progress-fill"></div>
+          </div>
+          <span class="assess-counter">Question <span class="assess-q-current">1</span> of <span class="assess-q-total">5</span></span>
+          <span class="assess-eyebrow assess-dimension"></span>
+          <h3 class="assess-question"></h3>
+          <div class="assess-options" role="radiogroup" aria-label="Answer options"></div>
+          <div class="assess-nav">
+            <button type="button" class="assess-btn-secondary" data-action="back">&larr; Back</button>
+            <button type="button" class="assess-btn-primary" data-action="next" disabled>
+              <span class="assess-next-label">Next</span> <span class="arrow">&rarr;</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- RESULTS -->
+        <div class="assess-screen" id="screen-results">
+          <span class="assess-eyebrow">Your maturity stage</span>
+          <h2 class="assess-stage-name"></h2>
+          <p class="assess-stage-desc"></p>
+
+          <div class="assess-spectrum">
+            <div class="assess-spectrum-track">
+              <div class="assess-spectrum-marker"></div>
+            </div>
+            <div class="assess-spectrum-labels">
+              <span>Reactive</span>
+              <span>Stabilising</span>
+              <span>Scaling</span>
+              <span>AI Assisted</span>
+              <span>Resilient</span>
+            </div>
+          </div>
+
+          <div class="assess-next-box">
+            <span class="assess-next-eyebrow">What this means for your operation</span>
+            <p class="assess-stage-next"></p>
+          </div>
+
+          <form class="assess-email-form">
+            <label class="assess-email-label" for="assess-email">Get your full results with tailored recommendations from our CX team.</label>
+            <div class="assess-email-row">
+              <input type="email" id="assess-email" name="email" required placeholder="you@yourcompany.com" class="assess-email-input">
+              <button type="submit" class="assess-btn-primary assess-email-submit">
+                <span class="assess-submit-label">Send</span> <span class="arrow">&rarr;</span>
+              </button>
+            </div>
+          </form>
+
+          <button type="button" class="assess-btn-text" data-action="retake">Retake the assessment</button>
+        </div>
+      </div>
+
+      <!-- Sketch-style mockup of the deliverable report -->
+      <aside class="cta-mockup" aria-hidden="true">
+        <div class="cta-mockup-card">
+          <div class="cta-mockup-chrome">
+            <span class="cta-mockup-dot"></span>
+            <span class="cta-mockup-dot"></span>
+            <span class="cta-mockup-dot"></span>
+          </div>
+          <div class="cta-mockup-body">
+            <div class="cta-mockup-sidebar">
+              <div class="cta-mockup-logo">foundever<span>&trade;</span></div>
+              <ul class="cta-mockup-nav">
+                <li>Launchpad</li>
+                <li>Maturity score</li>
+                <li class="active">Your report</li>
+                <li>Recommendations</li>
+                <li>Benchmark</li>
+                <li>Action plan</li>
+              </ul>
+            </div>
+            <div class="cta-mockup-content">
+              <h4 class="cta-mockup-title">Get your own report</h4>
+              <div class="cta-mockup-subtitle">CX maturity benchmarked against peer enterprises</div>
+              <div class="cta-mockup-kpis">
+                <div class="cta-mockup-kpi">
+                  <span class="cta-mockup-kpi-num">82</span>
+                  <span class="cta-mockup-kpi-lbl">Maturity score</span>
+                </div>
+                <div class="cta-mockup-kpi">
+                  <span class="cta-mockup-kpi-num">+18%</span>
+                  <span class="cta-mockup-kpi-lbl">vs peer avg</span>
+                </div>
+              </div>
+              <div class="cta-mockup-chart">
+                <div class="cta-mockup-donut">
+                  <div class="cta-mockup-donut-center">
+                    <span class="cta-mockup-donut-num">82</span>
+                    <span class="cta-mockup-donut-lbl">vs 64</span>
+                  </div>
+                </div>
+                <div class="cta-mockup-legend">
+                  <div class="cta-mockup-legend-item"><span class="cta-mockup-legend-dot cta-mockup-legend-dot-1"></span>Operations</div>
+                  <div class="cta-mockup-legend-item"><span class="cta-mockup-legend-dot cta-mockup-legend-dot-2"></span>Technology</div>
+                  <div class="cta-mockup-legend-item"><span class="cta-mockup-legend-dot cta-mockup-legend-dot-3"></span>Resilience</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER (Foundever brand-static; only update the copyright year) ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="logo">foundever<span>&trade;</span></div>
+          <p class="footer-tagline">Create connection.<br>Value conversation.</p>
+          <div class="social-icons">
+            <a href="#" class="social-icon" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="Twitter">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-columns">
+          <div class="footer-column">
+            <h4>Company</h4>
+            <a href="#">About</a>
+            <a href="#">News</a>
+            <a href="#">Industries</a>
+            <a href="#">Careers</a>
+          </div>
+          <div class="footer-column">
+            <h4>Services</h4>
+            <a href="#">Services</a>
+            <a href="#">Solutions</a>
+            <a href="#">Resources</a>
+            <a href="#">Case Studies</a>
+          </div>
+          <div class="footer-column">
+            <h4>Legal</h4>
+            <a href="#">Terms of Use</a>
+            <a href="#">Privacy &amp; Cookie Policies</a>
+            <a href="#">Global Code of Conduct</a>
+            <a href="#">Ethics Point</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-copyright">&copy; 2026 Foundever. All rights reserved.</span>
+        <div class="footer-bottom-links">
+          <a href="#">Vendor Portal</a>
+          <a href="#">Sitemap</a>
+          <a href="#">Accessibility</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
