@@ -103,84 +103,6 @@
 
   <!--
     ============================================================
-    STATS (combined: scale flex on top, outcome stats on bottom)
-    Top zone: 1 headline + 2 large scale numbers (total brand flex)
-    Bottom zone: 4 outcome stats (each picks up a different panel buyer)
-
-    Volume isn't the challenge. Complexity is, and interactions are higher stakes than ever.            — outcome statement, e.g. "Better and more compliant customer outcomes, with a lower cost to serve"
-
-    SCALE STATS (top)
-    +        — usually "+" (or empty)
-    150               — counter target value, integer (e.g. "10")
-    K        — e.g. "K" or "M" or empty
-    agents worldwide             — e.g. "insurance associates worldwide"
-    +        — usually "+"
-    800               — counter target (e.g. "55")
-            — usually empty
-    brands trust Foundever             — e.g. "insurance brands supported globally"
-
-    OUTCOME STATS (bottom — 4 cards, each maps to a panel buyer)
-    Slot 1: typically operator credibility (COO/CRO) — ramp/peak/event-response
-    Slot 2: typically efficiency/cost (CFO/COO)
-    Slot 3: typically compliance/audit (CRO/Head of Conduct)
-    Slot 4: typically CCO/customer outcome (NPS, complaints, retention)
-
-    Each slot:
-    {{OUTCOME_N_NUM}}        — full number string (e.g. "X weeks", "10–30%", "+95%", "+X pts NPS")
-                              if you want count-up animation, use this pattern:
-                              <span class="count-up" data-target="50">0</span>%
-    {{OUTCOME_N_LABEL}}      — short descriptor that completes the stat (e.g. "to stand up specialist capacity for peak events and CAT season")
-
-    Find your CX blindspots      — e.g. "Find your CX blindspots"
-    #cta       — usually "#cta"
-    ============================================================
-  -->
-  <section class="insurance-stats" id="value-props">
-    <div class="container">
-
-      <!-- Top zone: headline + 2 big scale stats -->
-      <div class="istats-top">
-        <h2 class="istats-headline">Volume isn't the challenge. Complexity is, and interactions are higher stakes than ever.</h2>
-        <div class="istats-scale-item">
-          <div class="istats-scale-num">+<span class="count-up" data-target="150">0</span>K</div>
-          <div class="istats-scale-lbl">agents worldwide</div>
-        </div>
-        <div class="istats-scale-item">
-          <div class="istats-scale-num">+<span class="count-up" data-target="800">0</span></div>
-          <div class="istats-scale-lbl">brands trust Foundever</div>
-        </div>
-      </div>
-
-      <div class="istats-divider"></div>
-
-      <!-- Bottom zone: 4 outcome stats -->
-      <div class="istats-outcomes">
-        <div class="istats-outcome">
-          <div class="istats-outcome-num"><span class="count-up" data-target="45">0</span></div>
-          <div class="istats-outcome-lbl">worldwide operations, ready to flex to volume and seasonal peaks</div>
-        </div>
-        <div class="istats-outcome">
-          <div class="istats-outcome-num">&darr;<span class="count-up" data-target="28">0</span>%</div>
-          <div class="istats-outcome-lbl">lower average handle time through right shoring, automation, and AI augmented agents</div>
-        </div>
-        <div class="istats-outcome">
-          <div class="istats-outcome-num"><span class="count-up" data-target="93">0</span>%</div>
-          <div class="istats-outcome-lbl">agent retention, keeping service consistent through every peak</div>
-        </div>
-        <div class="istats-outcome">
-          <div class="istats-outcome-num">&darr;<span class="count-up" data-target="27">0</span>%</div>
-          <div class="istats-outcome-lbl">lower customer effort as AI and analytics close the tech gap</div>
-        </div>
-      </div>
-
-      <div class="stats-cta">
-        <a href="#cta" class="btn btn-primary">Find your CX blindspots <span class="arrow">&rarr;</span></a>
-      </div>
-    </div>
-  </section>
-
-  <!--
-    ============================================================
     SOLUTIONS (4 capability cards in a tabbed rolling bar)
     Each card maps to one capability theme of the vertical.
     Insurance defaults: Acquisition & retention | Claims management | Policy servicing | Financial crime & compliance
@@ -274,7 +196,7 @@
     Foundever case study   — image alt text
     ============================================================
   -->
-  <section class="case-study case-study--light">
+  <section class="case-study case-study--light" id="value-props">
     <div class="container">
       <div class="case-study-inner">
         <div class="case-study-text">

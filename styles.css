@@ -334,9 +334,10 @@ h4 { font-size: 18px; font-weight: 700; line-height: 1.4; }
 
 .claim-statement-text {
   font-family: var(--font);
-  font-size: clamp(28px, 3.6vw, 46px);
-  font-weight: 700;
-  line-height: 1.45;
+  font-size: clamp(24px, 2.6vw, 32px);
+  font-weight: 300;
+  line-height: 1.2;
+  letter-spacing: -0.3px;
 }
 
 .claim-part {
@@ -349,12 +350,10 @@ h4 { font-size: 18px; font-weight: 700; line-height: 1.4; }
 
 .claim-part--reframe {
   opacity: 0.55;
-  font-weight: 600;
 }
 
 .claim-part--resolution {
   opacity: 0.3;
-  font-weight: 500;
 }
 
 @media (max-width: 700px) {
@@ -397,112 +396,6 @@ h4 { font-size: 18px; font-weight: 700; line-height: 1.4; }
 @keyframes marquee {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
-}
-
-/* ===== INSURANCE STATS (combined: use cases + scale proof) ===== */
-.insurance-stats {
-  background: var(--dark-navy);
-  padding: 80px 0;
-  color: var(--white);
-}
-
-.insurance-stats .container {
-  max-width: 1100px;
-}
-
-/* Top zone: headline + 2 big scale stats in a 3-col grid */
-.istats-top {
-  display: grid;
-  grid-template-columns: 1.3fr 1fr 1fr;
-  gap: 48px;
-  align-items: start;
-  margin-bottom: 48px;
-}
-
-.istats-headline {
-  font-size: clamp(24px, 2.6vw, 32px);
-  font-weight: 300;
-  line-height: 1.2;
-  letter-spacing: -0.3px;
-  color: var(--white);
-  max-width: 360px;
-}
-
-.istats-scale-num {
-  font-size: clamp(56px, 6vw, 80px);
-  font-weight: 300;
-  line-height: 1;
-  letter-spacing: -2px;
-  color: var(--purple-light);
-  margin-bottom: 14px;
-}
-
-.istats-scale-lbl {
-  font-size: 15px;
-  line-height: 1.5;
-  font-weight: 400;
-  color: rgba(255,255,255,0.7);
-  max-width: 220px;
-}
-
-/* Divider between top and bottom */
-.istats-divider {
-  height: 1px;
-  background: rgba(255,255,255,0.15);
-  margin: 0 0 48px;
-}
-
-/* Bottom zone: 4 outcome stats, number-left + label-right */
-.istats-outcomes {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 32px;
-  margin-bottom: 48px;
-}
-
-.istats-outcome {
-  display: flex;
-  align-items: flex-start;
-  gap: 14px;
-}
-
-.istats-outcome-num {
-  font-size: clamp(26px, 2.6vw, 32px);
-  font-weight: 300;
-  line-height: 1;
-  letter-spacing: -1px;
-  color: var(--purple-light);
-  flex-shrink: 0;
-  white-space: nowrap;
-}
-
-.istats-outcome-lbl {
-  font-size: 13px;
-  line-height: 1.5;
-  font-weight: 400;
-  color: rgba(255,255,255,0.7);
-}
-
-.insurance-stats .stats-cta {
-  text-align: center;
-  margin-top: 0;
-}
-
-.stats-cta {
-  text-align: center;
-  margin-top: 36px;
-}
-
-@media (max-width: 768px) {
-  .istats-top {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-  .istats-headline { max-width: none; }
-  .istats-outcomes {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 28px 20px;
-  }
 }
 
 /* ===== SOLUTIONS ===== */
