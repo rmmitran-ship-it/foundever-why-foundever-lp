@@ -292,8 +292,6 @@ h4 { font-size: 18px; font-weight: 700; line-height: 1.4; }
 /* ===== CREDIBILITY BAND ===== */
 .credibility-band {
   background: var(--gray-bg);
-  border-top: 1px solid var(--gray-medium);
-  border-bottom: 1px solid var(--gray-medium);
   padding: 26px 0;
 }
 
