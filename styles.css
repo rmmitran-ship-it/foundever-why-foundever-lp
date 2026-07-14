@@ -300,7 +300,7 @@ h4 { font-size: 18px; font-weight: 700; line-height: 1.4; }
   font-size: 15px;
   font-family: var(--font);
   color: var(--gray-icon);
-  line-height: 1.8;
+  line-height: 1.2;
 }
 
 .cred-stat {
