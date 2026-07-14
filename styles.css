@@ -460,11 +460,11 @@ h4 { font-size: 18px; font-weight: 700; line-height: 1.4; }
 .approach-card--blue {
   background: linear-gradient(150deg, #2E4BC7 0%, #5A4FFF 55%, #7B6FFF 100%);
 }
-.approach-card--magenta {
-  background: linear-gradient(150deg, #7A2AA0 0%, #A63B8F 55%, #C24FA0 100%);
+.approach-card--navy {
+  background: linear-gradient(150deg, #14152E 0%, #1A1FA0 55%, #2B4BF2 100%);
 }
-.approach-card--orange {
-  background: linear-gradient(150deg, #C2570F 0%, #DD7E1F 55%, #E8A23F 100%);
+.approach-card--periwinkle {
+  background: linear-gradient(150deg, #4A56D6 0%, #7B85F0 55%, #A8B3FA 100%);
 }
 
 .approach-card-title {
