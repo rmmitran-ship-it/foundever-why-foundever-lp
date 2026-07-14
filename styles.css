@@ -320,6 +320,48 @@ h4 { font-size: 18px; font-weight: 700; line-height: 1.4; }
   .credibility-divider::before { content: ''; }
 }
 
+/* ===== CLAIM / REFRAME / RESOLUTION STATEMENT ===== */
+.claim-statement {
+  background: var(--dark-navy);
+  padding: 110px 0;
+}
+
+.claim-statement-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 64px;
+}
+
+.claim-statement-text {
+  font-family: var(--font);
+  font-size: clamp(28px, 3.6vw, 46px);
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.claim-part {
+  color: var(--white);
+}
+
+.claim-part--claim {
+  opacity: 1;
+}
+
+.claim-part--reframe {
+  opacity: 0.55;
+  font-weight: 600;
+}
+
+.claim-part--resolution {
+  opacity: 0.3;
+  font-weight: 500;
+}
+
+@media (max-width: 700px) {
+  .claim-statement { padding: 72px 0; }
+  .claim-statement-container { padding: 0 24px; }
+}
+
 /* ===== ROLLING BAR ===== */
 .rolling-bar {
   background: var(--gray-bg);
