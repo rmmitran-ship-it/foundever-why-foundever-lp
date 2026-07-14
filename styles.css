@@ -321,7 +321,7 @@ h4 { font-size: 18px; font-weight: 700; line-height: 1.4; }
 /* ===== CLAIM / REFRAME / RESOLUTION STATEMENT (scroll-scrubbed word reveal) ===== */
 .claim-statement {
   position: relative;
-  height: 250vh;
+  height: 160vh;
   background: var(--dark-navy);
 }
 
@@ -356,7 +356,7 @@ h4 { font-size: 18px; font-weight: 700; line-height: 1.4; }
 }
 
 @media (max-width: 700px) {
-  .claim-statement { height: 200vh; }
+  .claim-statement { height: 130vh; }
   .claim-statement-container { padding: 0 24px; }
 }
 
