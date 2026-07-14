@@ -48,13 +48,13 @@ if (track) {
   counters.forEach(c => observer.observe(c));
 })();
 
-// ===== 9M Decimal Counter =====
+// ===== Decimal Counter (e.g. conversations per year) =====
 (function() {
   const el = document.getElementById('hstat-counter');
   if (!el) return;
   let animated = false;
   const duration = 1800;
-  const target = 9.0;
+  const target = parseFloat(el.dataset.target);
 
   function animate() {
     if (animated) return;

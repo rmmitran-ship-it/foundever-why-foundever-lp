@@ -289,6 +289,37 @@ h4 { font-size: 18px; font-weight: 700; line-height: 1.4; }
   transform-origin: left center;
 }
 
+/* ===== CREDIBILITY BAND ===== */
+.credibility-band {
+  background: var(--gray-bg);
+  border-top: 1px solid var(--gray-medium);
+  border-bottom: 1px solid var(--gray-medium);
+  padding: 26px 0;
+}
+
+.credibility-text {
+  text-align: center;
+  font-size: 15px;
+  font-family: var(--font);
+  color: var(--gray-icon);
+  line-height: 1.8;
+}
+
+.cred-stat {
+  color: var(--purple);
+  font-weight: 700;
+}
+
+.credibility-divider {
+  color: var(--gray-medium);
+  margin: 0 12px;
+}
+
+@media (max-width: 700px) {
+  .credibility-divider { display: block; height: 0; margin: 4px 0; }
+  .credibility-divider::before { content: ''; }
+}
+
 /* ===== ROLLING BAR ===== */
 .rolling-bar {
   background: var(--gray-bg);
