@@ -591,31 +591,30 @@ h4 { font-size: 18px; font-weight: 700; line-height: 1.4; }
   margin: 0;
 }
 
+.case-study-cards {
+  padding: 80px 0;
+  background: var(--white);
+}
+
+.case-study-cards-headline {
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 60px;
+  max-width: 900px;
+  color: var(--dark-navy);
+}
+
 .case-study-cards-layout {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
   position: relative;
-}
-
-.case-study-col {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-}
-
-.case-study-col--left {
-  gap: 0;
-}
-
-.case-study-col--right {
-  gap: 0;
+  width: 100%;
+  height: 706px;
 }
 
 .case-card {
-  position: relative;
+  position: absolute;
   border-radius: 28px;
-  padding: 48px 40px;
+  padding: 36px 40px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -625,61 +624,63 @@ h4 { font-size: 18px; font-weight: 700; line-height: 1.4; }
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
   overflow: hidden;
-  box-shadow: 0 24px 48px -20px rgba(15,15,40,0.35);
 }
 
 .case-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 32px 60px -16px rgba(15,15,40,0.4);
 }
 
+/* Card 1: Financial Services - Top Left (Navy) */
 .case-card--1 {
+  top: 0;
+  left: 0;
+  width: calc(50% - 20px);
   height: 370px;
-  min-height: 370px;
+  background: linear-gradient(135deg, #1c1c42 0%, #0e0e26 100%);
+  box-shadow: 0 24px 48px -20px rgba(15,15,40,0.35);
   z-index: 4;
 }
 
+/* Card 2: Retail - Bottom Left (Purple) */
 .case-card--2 {
+  top: 394px;
+  left: 0;
+  width: calc(50% - 20px);
   height: 300px;
-  min-height: 300px;
-  margin-top: 394px;
-  z-index: 2;
-  box-shadow: 0 24px 48px -20px rgba(15,15,40,0.22);
-}
-
-.case-card--3 {
-  height: 240px;
-  min-height: 240px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  z-index: 3;
-  box-shadow: 0 24px 48px -20px rgba(15,15,40,0.22);
-}
-
-.case-card--4 {
-  height: 430px;
-  min-height: 430px;
-  margin-top: 264px;
-  z-index: 1;
-}
-
-.case-card-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  width: 100%;
-}
-
-.case-card-headline {
-  font-size: 28px;
-  font-weight: 700;
-  line-height: 1.25;
+  background: #c8b9fb;
   color: #16162e;
-  flex: 1 1 46%;
-  min-width: 0;
+  box-shadow: 0 24px 48px -20px rgba(15,15,40,0.22);
+  z-index: 2;
+}
+
+/* Card 3: Insurance - Top Right (Purple, Horizontal Layout) */
+.case-card--3 {
+  top: 0;
+  right: 0;
+  left: auto;
+  width: calc(50% - 20px);
+  height: 240px;
+  background: #c8b9fb;
+  color: #16162e;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 36px 40px;
+  box-shadow: 0 24px 48px -20px rgba(15,15,40,0.22);
+  z-index: 3;
+}
+
+/* Card 4: Public Services - Bottom Right (Navy) */
+.case-card--4 {
+  top: 264px;
+  right: 0;
+  left: auto;
+  width: calc(50% - 20px);
+  height: 430px;
+  background: linear-gradient(135deg, #1c1c42 0%, #0e0e26 100%);
+  box-shadow: 0 24px 48px -20px rgba(15,15,40,0.35);
+  z-index: 1;
 }
 
 .case-card:hover {
@@ -708,56 +709,19 @@ h4 { font-size: 18px; font-weight: 700; line-height: 1.4; }
   margin-bottom: 24px;
 }
 
-.case-card-metric {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+.case-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 18% 12%, rgba(120,140,255,0.35), transparent 55%);
+  pointer-events: none;
 }
 
-.case-card-metric--right {
-  text-align: right;
-  flex: 1 1 46%;
-  min-width: 0;
+.case-card-overlay--4 {
+  background: radial-gradient(circle at 82% 88%, rgba(120,140,255,0.28), transparent 55%);
 }
 
-.case-card-number {
-  font-size: 68px;
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  line-height: 1.0;
-  display: block;
-}
-
-.case-card--purple .case-card-number {
-  color: #16162e;
-}
-
-.case-card--navy .case-card-number {
-  color: #7ef7c9;
-}
-
-.case-card--lavender .case-card-number {
-  color: var(--dark-navy);
-}
-
-.case-card-label {
-  font-size: 19px;
-  line-height: 1.4;
-  font-weight: 500;
-  margin-top: 8px;
-}
-
-.case-card--navy .case-card-label {
-  color: #eceafc;
-  max-width: 78%;
-}
-
-.case-card--purple .case-card-label {
-  color: #26264a;
-  max-width: 80%;
-}
-
-.case-card-study {
+/* Case Study Badges - Positioned absolutely */
+.case-card-badge {
   position: absolute;
   background: #fff;
   border-radius: 16px;
@@ -766,43 +730,30 @@ h4 { font-size: 18px; font-weight: 700; line-height: 1.4; }
   z-index: 10;
 }
 
-.case-card-study--float {
+/* Badge 1: Financial Services */
+.case-card-badge--1 {
+  top: 326px;
   left: 0;
-  bottom: -22px;
 }
 
-.case-card-study--float-right {
-  left: 247px;
+/* Badge 2: Retail */
+.case-card-badge--2 {
   top: 249px;
+  left: 247px;
 }
 
-.case-card-study--top {
+/* Badge 3: Insurance */
+.case-card-badge--3 {
   top: -24px;
   left: 50%;
   transform: translateX(-50%);
 }
 
-.case-card-study--bottom {
-  bottom: -20px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.case-card-study-label {
-  display: block;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  color: #6b6b80;
-  text-transform: uppercase;
-}
-
-.case-card-study-industry {
-  display: block;
-  font-size: 17px;
-  font-weight: 700;
-  color: #4451e0;
-  margin-top: 4px;
+/* Badge 4: Public Services */
+.case-card-badge--4 {
+  top: 385px;
+  right: 0;
+  left: auto;
 }
 
 .case-card-overlay {
@@ -818,91 +769,47 @@ h4 { font-size: 18px; font-weight: 700; line-height: 1.4; }
 
 @media (max-width: 860px) {
   .case-study-cards-layout {
-    grid-template-columns: 1fr;
-    gap: 0;
-  }
-
-  .case-study-col {
     position: relative;
     width: 100%;
+    height: auto;
   }
 
   .case-card {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
     width: calc(100% - 24px) !important;
-    margin-right: 0 !important;
-    margin-bottom: 0 !important;
-    margin-top: 0 !important;
-    z-index: auto !important;
     height: auto !important;
     min-height: 190px !important;
     padding: 32px 26px 40px !important;
     border-radius: 22px !important;
-  }
-
-  .case-card--1,
-  .case-card--2,
-  .case-card--3,
-  .case-card--4 {
-    margin-top: 44px !important;
-    margin-right: 0 !important;
+    margin-top: 44px;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    transform: none !important;
   }
 
   .case-card--1 {
     margin-top: 0 !important;
   }
 
-  .case-card-content {
-    flex-direction: column;
-    align-items: flex-start;
+  .case-card--3 {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    gap: 0 !important;
   }
 
-  .case-card-headline {
-    font-size: 22px;
-    width: 100%;
-  }
-
-  .case-card-metric {
-    width: 100%;
-  }
-
-  .case-card-metric--right {
-    text-align: left;
-  }
-
-  .case-card-number {
-    font-size: 56px;
-  }
-
-  .case-card-label {
-    font-size: 17px;
-  }
-
-  .case-card-study {
-    position: static;
-    background: transparent;
-    border-radius: 0;
-    padding: 0;
-    box-shadow: none;
+  .case-card-badge {
+    position: static !important;
+    background: transparent !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
     margin-top: 20px;
-  }
-
-  .case-card-study--float,
-  .case-card-study--float-right,
-  .case-card-study--top,
-  .case-card-study--bottom {
-    position: static;
-    left: auto;
-    top: auto;
-    bottom: auto;
-    transform: none;
-  }
-
-  .case-card-study-label {
-    font-size: 10px;
-  }
-
-  .case-card-study-industry {
-    font-size: 15px;
+    transform: none !important;
   }
 }
 
