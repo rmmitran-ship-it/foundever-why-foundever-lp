@@ -356,9 +356,10 @@ h4 { font-size: 18px; font-weight: 700; line-height: 1.4; }
 
 .claim-statement-frame {
   background: var(--dark-navy);
-  border-radius: 24px;
-  padding: 56px 64px;
+  border-radius: 8px;
+  padding: 8px 12px;
   max-width: 900px;
+  display: inline-block;
 }
 
 .claim-statement-text {
