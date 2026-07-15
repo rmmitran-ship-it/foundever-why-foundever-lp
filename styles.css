@@ -334,7 +334,7 @@ h4 { font-size: 18px; font-weight: 700; line-height: 1.4; }
 .claim-statement {
   position: relative;
   height: 160vh;
-  background: var(--dark-navy);
+  background: var(--white);
 }
 
 .claim-statement-sticky {
@@ -351,11 +351,20 @@ h4 { font-size: 18px; font-weight: 700; line-height: 1.4; }
   margin: 0 auto;
   padding: 0 64px;
   width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.claim-statement-frame {
+  background: var(--dark-navy);
+  border-radius: 24px;
+  padding: 56px 64px;
+  max-width: 900px;
 }
 
 .claim-statement-text {
   font-family: var(--font);
-  font-size: clamp(24px, 2.6vw, 32px);
+  font-size: clamp(22px, 2.4vw, 30px);
   font-weight: 300;
   line-height: 1.4;
   letter-spacing: -0.3px;
@@ -370,6 +379,7 @@ h4 { font-size: 18px; font-weight: 700; line-height: 1.4; }
 @media (max-width: 700px) {
   .claim-statement { height: 130vh; }
   .claim-statement-container { padding: 0 24px; }
+  .claim-statement-frame { padding: 32px 28px; border-radius: 18px; }
 }
 
 /* ===== ROLLING BAR ===== */
