@@ -572,13 +572,23 @@ h4 { font-size: 18px; font-weight: 700; line-height: 1.4; }
   background: var(--white);
 }
 
-.case-study-cards-headline {
+.case-study-cards-header {
+  margin-bottom: 60px;
+}
+
+.case-study-cards-header h2 {
   font-size: clamp(28px, 4vw, 44px);
   font-weight: 700;
   line-height: 1.15;
-  margin-bottom: 60px;
-  max-width: 900px;
+  margin-bottom: 8px;
   color: var(--dark-navy);
+}
+
+.case-study-cards-subtitle {
+  font-size: clamp(20px, 3vw, 28px);
+  font-weight: 600;
+  color: #5B5FFF;
+  margin: 0;
 }
 
 .case-study-cards-grid {
@@ -590,9 +600,9 @@ h4 { font-size: 18px; font-weight: 700; line-height: 1.4; }
 
 .case-card {
   position: relative;
-  border-radius: 24px;
-  padding: 40px 32px;
-  min-height: 300px;
+  border-radius: 28px;
+  padding: 48px 36px;
+  min-height: 320px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -638,7 +648,12 @@ h4 { font-size: 18px; font-weight: 700; line-height: 1.4; }
 }
 
 .case-card--navy {
-  background: linear-gradient(135deg, var(--dark-navy) 0%, var(--dark-navy-mid) 100%);
+  background: linear-gradient(135deg, #1a1a3a 0%, #2d2d5f 100%);
+}
+
+.case-card--purple {
+  background: linear-gradient(135deg, #c9b5f7 0%, #a78bfa 100%);
+  color: var(--dark-navy);
 }
 
 .case-card--lavender {
@@ -661,18 +676,23 @@ h4 { font-size: 18px; font-weight: 700; line-height: 1.4; }
 }
 
 .case-card-number {
-  font-size: 44px;
+  font-size: 56px;
   font-weight: 800;
-  line-height: 1.1;
+  line-height: 1.0;
   display: block;
+  margin-bottom: 8px;
 }
 
-.case-card--lavender .case-card-number {
+.case-card--purple .case-card-number {
   color: var(--dark-navy);
 }
 
 .case-card--navy .case-card-number {
-  color: #5CD65C;
+  color: var(--white);
+}
+
+.case-card--lavender .case-card-number {
+  color: var(--dark-navy);
 }
 
 .case-card-label {
@@ -695,21 +715,35 @@ h4 { font-size: 18px; font-weight: 700; line-height: 1.4; }
   font-weight: 700;
   margin-top: 4px;
   opacity: 1;
+  color: #5B5FFF;
+}
+
+.case-card--navy .case-card-study span {
+  color: #5B5FFF;
+}
+
+.case-card--purple .case-card-study span {
+  color: #5B5FFF;
 }
 
 @media (max-width: 768px) {
   .case-study-cards-grid {
-    grid-template-columns: 1fr;
-    gap: 24px;
+    flex-direction: column;
+    gap: 0;
   }
 
   .case-card {
-    min-height: 280px;
-    padding: 32px 28px;
+    width: 100% !important;
+    margin-right: 0 !important;
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+    z-index: auto !important;
+    min-height: auto;
+    padding: 40px 28px;
   }
 
-  .case-card h3 {
-    font-size: 20px;
+  .case-card-number {
+    font-size: 42px;
   }
 }
 
