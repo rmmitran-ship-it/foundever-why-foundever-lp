@@ -566,6 +566,124 @@ h4 { font-size: 18px; font-weight: 700; line-height: 1.4; }
   border: none;
 }
 
+/* ===== CASE STUDY CARDS (proof/outcomes grid) ===== */
+.case-study-cards {
+  padding: 80px 0;
+  background: var(--white);
+}
+
+.case-study-cards-headline {
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 60px;
+  max-width: 900px;
+  color: var(--dark-navy);
+}
+
+.case-study-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+  position: relative;
+}
+
+.case-card {
+  position: relative;
+  border-radius: 20px;
+  padding: 40px 32px;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  color: var(--white);
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.case-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.case-card--navy {
+  background: linear-gradient(135deg, var(--dark-navy) 0%, var(--dark-navy-mid) 100%);
+}
+
+.case-card--lavender {
+  background: linear-gradient(135deg, #D8C5F2 0%, #C9B3E8 100%);
+  color: var(--dark-navy);
+}
+
+.case-card h3 {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 24px;
+}
+
+.case-card-metric {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+
+.case-card-number {
+  font-size: 44px;
+  font-weight: 800;
+  line-height: 1.1;
+  display: block;
+}
+
+.case-card--lavender .case-card-number {
+  color: var(--dark-navy);
+}
+
+.case-card--navy .case-card-number {
+  color: #5CD65C;
+}
+
+.case-card-label {
+  font-size: 14px;
+  line-height: 1.4;
+  opacity: 0.85;
+}
+
+.case-card-study {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  opacity: 0.7;
+  line-height: 1.5;
+}
+
+.case-card-study span {
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+  margin-top: 4px;
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .case-study-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .case-card {
+    min-height: 280px;
+    padding: 32px 28px;
+  }
+
+  .case-card h3 {
+    font-size: 20px;
+  }
+}
+
 /* ===== INSIGHTS ===== */
 .insights {
   padding: 80px 0;
