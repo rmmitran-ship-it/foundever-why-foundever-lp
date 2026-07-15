@@ -330,58 +330,6 @@ h4 { font-size: 18px; font-weight: 700; line-height: 1.4; }
   .credibility-divider::before { content: ''; }
 }
 
-/* ===== CLAIM / REFRAME / RESOLUTION STATEMENT (scroll-scrubbed word reveal) ===== */
-.claim-statement {
-  position: relative;
-  height: 160vh;
-}
-
-.claim-statement-sticky {
-  position: sticky;
-  top: 0;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-}
-
-.claim-statement-container {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 64px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.claim-statement-frame {
-  background: var(--dark-navy);
-  border-radius: 8px;
-  padding: 8px 12px;
-  max-width: 900px;
-  display: inline-block;
-}
-
-.claim-statement-text {
-  font-family: var(--font);
-  font-size: clamp(22px, 2.4vw, 30px);
-  font-weight: 300;
-  line-height: 1.4;
-  letter-spacing: -0.3px;
-}
-
-.reveal-word {
-  display: inline-block;
-  color: var(--white);
-  opacity: 0.25;
-}
-
-@media (max-width: 700px) {
-  .claim-statement { height: 130vh; }
-  .claim-statement-container { padding: 0 24px; }
-  .claim-statement-frame { padding: 32px 28px; border-radius: 18px; }
-}
-
 /* ===== ROLLING BAR ===== */
 .rolling-bar {
   background: var(--gray-bg);

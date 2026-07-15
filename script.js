@@ -16,49 +16,6 @@ if (track) {
   track.addEventListener('mouseleave', () => track.style.animationPlayState = 'running');
 }
 
-// ===== Scroll-scrubbed word reveal (claim / reframe / resolution) =====
-(function() {
-  const section = document.getElementById('claim-statement');
-  const textEl = document.getElementById('claim-reveal-text');
-  if (!section || !textEl) return;
-
-  const words = textEl.textContent.trim().split(/\s+/);
-  textEl.innerHTML = words.map(w => '<span class="reveal-word">' + w + '</span>').join(' ');
-  const wordEls = textEl.querySelectorAll('.reveal-word');
-  const total = wordEls.length;
-  const overlap = 1.6; // how many word-slots each word takes to reach full opacity
-  const denom = (total - 1) + overlap; // ensures word 0 starts at progress 0 and the last word ends at progress 1
-
-  let ticking = false;
-
-  function update() {
-    ticking = false;
-    const rect = section.getBoundingClientRect();
-    const scrollable = rect.height - window.innerHeight;
-    let progress = scrollable > 0 ? (-rect.top) / scrollable : 0;
-    progress = Math.max(0, Math.min(1, progress));
-
-    wordEls.forEach((el, i) => {
-      const start = i / denom;
-      const end = (i + overlap) / denom;
-      let t = (progress - start) / (end - start);
-      t = Math.max(0, Math.min(1, t));
-      el.style.opacity = String(0.25 + 0.75 * t);
-    });
-  }
-
-  function onScroll() {
-    if (!ticking) {
-      ticking = true;
-      requestAnimationFrame(update);
-    }
-  }
-
-  window.addEventListener('scroll', onScroll, { passive: true });
-  window.addEventListener('resize', onScroll);
-  update();
-})();
-
 // ===== Count-Up Animation (integers) =====
 (function() {
   const counters = document.querySelectorAll('.count-up');
