@@ -308,41 +308,58 @@ h4 { font-size: 18px; font-weight: 700; line-height: 1.4; }
 }
 
 .credibility-text {
-  text-align: center;
-  font-size: 18px;
-  font-family: var(--font);
-  color: var(--gray-icon);
-  line-height: 1.5;
-  font-weight: 500;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: nowrap;
-  gap: 0;
+  gap: 48px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.cred-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+}
+
+.cred-label {
+  font-size: 14px;
+  color: var(--gray-icon);
+  font-weight: 400;
+  line-height: 1.4;
 }
 
 .cred-stat {
   color: var(--purple);
   font-weight: 700;
-  font-size: 19px;
-  white-space: nowrap;
+  font-size: 20px;
+  line-height: 1;
+  display: block;
 }
 
-.credibility-divider {
-  color: var(--gray-medium);
-  margin: 0 12px;
-  flex-shrink: 0;
-}
-
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
   .credibility-text {
-    font-size: 15px;
+    gap: 32px;
+  }
+  .cred-stat {
+    font-size: 18px;
+  }
+  .cred-label {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 900px) {
+  .credibility-text {
+    gap: 24px;
   }
   .cred-stat {
     font-size: 16px;
   }
-  .credibility-divider {
-    margin: 0 8px;
+  .cred-label {
+    font-size: 12px;
   }
 }
 
