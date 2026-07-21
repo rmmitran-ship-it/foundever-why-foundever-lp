@@ -1625,6 +1625,18 @@ h4 { font-size: 18px; font-weight: 700; line-height: 1.4; }
   .cta-mockup { display: none; }
 }
 
+/* ===== OUTCOMES CTA ===== */
+.outcomes-cta {
+  display: flex;
+  justify-content: center;
+  padding: 56px 0 40px;
+}
+
+.outcomes-cta .btn {
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
 /* ===== SOLUTIONS BRIDGE ===== */
 .solutions-bridge {
   display: flex;
