@@ -304,20 +304,22 @@ h4 { font-size: 18px; font-weight: 700; line-height: 1.4; }
 /* ===== CREDIBILITY BAND ===== */
 .credibility-band {
   background: var(--gray-bg);
-  padding: 4px 0;
+  padding: 28px 0;
 }
 
 .credibility-text {
   text-align: center;
-  font-size: 15px;
+  font-size: 18px;
   font-family: var(--font);
   color: var(--gray-icon);
-  line-height: 1.2;
+  line-height: 1.5;
+  font-weight: 500;
 }
 
 .cred-stat {
   color: var(--purple);
   font-weight: 700;
+  font-size: 19px;
 }
 
 .credibility-divider {
