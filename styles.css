@@ -551,6 +551,138 @@ h4 { font-size: 18px; font-weight: 700; line-height: 1.4; }
   .approach-card { min-height: auto; padding: 32px 28px; }
 }
 
+/* ===== PILLARS: Split Layout ===== */
+.pillars-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 60px;
+  align-items: center;
+  margin-bottom: 60px;
+  margin-top: 12px;
+}
+
+.pillars-description {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--gray-text);
+  max-width: 90%;
+}
+
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px 24px;
+}
+
+.pillar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 28px 20px;
+  background: linear-gradient(150deg, #2E4BC7 0%, #5A4FFF 55%, #7B6FFF 100%);
+  border-radius: 16px;
+  color: var(--white);
+}
+
+.pillar-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  color: var(--white);
+}
+
+.pillar-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.pillar-metric {
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 12px;
+  color: var(--white);
+}
+
+.pillar-title {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 12px;
+  color: var(--white);
+  max-width: 100%;
+}
+
+.pillar-desc {
+  font-size: 13px;
+  line-height: 1.5;
+  color: rgba(255,255,255,0.85);
+  max-width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .pillars-wrapper {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .pillars-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px 20px;
+  }
+}
+
+@media (max-width: 900px) {
+  .pillars-wrapper {
+    margin-top: 12px;
+  }
+
+  .pillars-description {
+    max-width: 100%;
+  }
+
+  .pillars-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 16px;
+  }
+
+  .pillar {
+    padding: 24px 16px;
+  }
+
+  .pillar-metric {
+    font-size: 32px;
+  }
+
+  .pillar-title {
+    font-size: 14px;
+  }
+
+  .pillar-desc {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 700px) {
+  .pillars-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .pillar {
+    padding: 20px 16px;
+  }
+
+  .pillar-metric {
+    font-size: 28px;
+  }
+}
+
 /* ===== CASE STUDY / BETTER BY DESIGN ===== */
 .case-study {
   background: linear-gradient(135deg, var(--dark-navy) 0%, var(--dark-navy-mid) 50%, var(--dark-navy) 100%);
