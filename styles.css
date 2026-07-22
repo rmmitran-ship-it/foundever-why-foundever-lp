@@ -1895,8 +1895,16 @@ h4 { font-size: 18px; font-weight: 700; line-height: 1.4; }
 
 .services-content h2 {
   color: var(--white);
-  margin-bottom: 48px;
+  margin-bottom: 16px;
   font-size: 42px;
+}
+
+.services-subtitle {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 48px;
+  max-width: 90%;
 }
 
 .services-list {
