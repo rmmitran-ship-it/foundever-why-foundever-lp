@@ -615,6 +615,7 @@ h4 { font-size: 18px; font-weight: 700; line-height: 1.4; }
   margin-bottom: 12px;
   color: var(--white);
   max-width: 100%;
+  margin-top: 0;
 }
 
 .pillar-desc {
@@ -622,6 +623,7 @@ h4 { font-size: 18px; font-weight: 700; line-height: 1.4; }
   line-height: 1.5;
   color: rgba(255,255,255,0.85);
   max-width: 100%;
+  margin-bottom: 16px;
 }
 
 /* Responsive */
