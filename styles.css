@@ -181,14 +181,14 @@ h4 { font-size: 18px; font-weight: 700; line-height: 1.4; }
 /* ===== HERO ===== */
 .hero {
   position: relative;
-  min-height: 620px;
-  height: 80vh;
-  max-height: 780px;
+  min-height: 500px;
+  height: 70vh;
+  max-height: 680px;
   display: flex;
   align-items: center;
   overflow: hidden;
   border-radius: 0;
-  padding: 120px 0 80px;
+  padding: 80px 0 60px;
 }
 
 /* Full-bleed background image */
@@ -242,7 +242,7 @@ h4 { font-size: 18px; font-weight: 700; line-height: 1.4; }
 
 .hero h1 {
   color: var(--white);
-  font-size: clamp(36px, 5vw, 56px);
+  font-size: clamp(36px, 5vw, 48px);
   font-weight: 800;
   line-height: 1.05;
   margin-bottom: 8px;
