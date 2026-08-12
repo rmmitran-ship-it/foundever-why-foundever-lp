@@ -326,3 +326,45 @@ if (track) {
     else if (action === 'retake') retake();
   });
 })();
+
+// ===== SCROLL-SYNCED PROGRESS: Text Blocks, Progress Dots, Stat Cards =====
+(function() {
+  const textBlocks = document.querySelectorAll('.scroll-text-block[data-block]');
+  const progressDots = document.querySelectorAll('.progress-dot');
+  const statCards = document.querySelectorAll('.stat-card[data-card]');
+
+  if (!textBlocks.length || !progressDots.length || !statCards.length) return;
+
+  function setActive(blockNum) {
+    // Update progress dots
+    progressDots.forEach(dot => dot.classList.remove('active'));
+    const activeDot = document.querySelector(`.progress-dot--${blockNum}`);
+    if (activeDot) activeDot.classList.add('active');
+
+    // Update stat cards
+    statCards.forEach(card => card.classList.remove('active'));
+    const activeCard = document.querySelector(`.stat-card[data-card="${blockNum}"]`);
+    if (activeCard) activeCard.classList.add('active');
+  }
+
+  // IntersectionObserver to track which block is in view
+  const observerOptions = {
+    root: null,
+    rootMargin: '-30% 0px -30% 0px',
+    threshold: 0
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const blockNum = entry.target.dataset.block;
+        setActive(blockNum);
+      }
+    });
+  }, observerOptions);
+
+  textBlocks.forEach(block => observer.observe(block));
+
+  // Set initial active state
+  setActive('1');
+})();
