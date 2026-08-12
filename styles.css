@@ -561,7 +561,7 @@ h4 { font-size: 18px; font-weight: 700; line-height: 1.4; }
   .approach-card { min-height: auto; padding: 32px 28px; }
 }
 
-/* ===== SCROLL-SYNCED TWO-COLUMN LAYOUT ===== */
+/* ===== TWO-COLUMN LAYOUT: Text Left, Stats Right ===== */
 .scroll-layout {
   margin-top: 60px;
   margin-bottom: 80px;
@@ -572,69 +572,25 @@ h4 { font-size: 18px; font-weight: 700; line-height: 1.4; }
 }
 
 .scroll-layout-left {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
 }
 
 .scroll-layout-right {
-  position: sticky;
-  top: 120px;
-}
-
-/* Progress Indicator (Left Column) */
-.scroll-progress {
-  position: absolute;
-  left: -40px;
-  top: 0;
-  bottom: 0;
-  width: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  gap: 40px;
 }
-
-.progress-line {
-  position: absolute;
-  left: 50%;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: linear-gradient(180deg, rgba(90, 79, 255, 0.2) 0%, rgba(90, 79, 255, 0.1) 100%);
-  transform: translateX(-50%);
-}
-
-.progress-dot {
-  position: absolute;
-  width: 12px;
-  height: 12px;
-  border: 2px solid var(--gray-medium);
-  border-radius: 50%;
-  background: var(--white);
-  left: 50%;
-  transform: translateX(-50%);
-  transition: all 0.3s ease;
-  z-index: 2;
-}
-
-.progress-dot.active {
-  background: var(--purple);
-  border-color: var(--purple);
-  box-shadow: 0 0 0 4px rgba(90, 79, 255, 0.15);
-}
-
-.progress-dot--1 { top: 0; }
-.progress-dot--2 { top: 50%; transform: translateX(-50%) translateY(-50%); }
-.progress-dot--3 { top: 100%; transform: translateX(-50%) translateY(-100%); }
 
 /* Text Blocks */
 .scroll-text-block {
-  margin-bottom: 120px;
-  padding-left: 0;
   animation: fadeInUp 0.8s ease-out both;
 }
 
-.scroll-text-block:nth-child(2) { animation-delay: 0.1s; }
-.scroll-text-block:nth-child(3) { animation-delay: 0.15s; }
-.scroll-text-block:nth-child(4) { animation-delay: 0.2s; }
+.scroll-text-block:nth-child(1) { animation-delay: 0.1s; }
+.scroll-text-block:nth-child(2) { animation-delay: 0.15s; }
+.scroll-text-block:nth-child(3) { animation-delay: 0.2s; }
 
 @keyframes fadeInUp {
   from {
@@ -664,31 +620,20 @@ h4 { font-size: 18px; font-weight: 700; line-height: 1.4; }
   margin: 0;
 }
 
-/* Sticky Stat Card Container */
-.stat-card-sticky {
-  position: relative;
-  height: 320px;
-}
-
-.stat-card-frame {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
+/* Stat Cards */
+.stat-card {
   background: linear-gradient(135deg, #F3F4F6 0%, #F9FAFB 100%);
   border: 1px solid var(--gray-medium);
   border-radius: 20px;
   padding: 48px 40px;
   text-align: center;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  opacity: 0;
-  transition: opacity 0.4s ease;
-  pointer-events: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.stat-card-frame.active {
-  opacity: 1;
-  pointer-events: auto;
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.1);
 }
 
 .stat-card-value {
@@ -740,12 +685,12 @@ h4 { font-size: 18px; font-weight: 700; line-height: 1.4; }
     gap: 40px;
   }
 
-  .scroll-layout-right {
-    position: static;
+  .scroll-layout-left {
+    gap: 60px;
   }
 
-  .scroll-progress {
-    display: none;
+  .scroll-layout-right {
+    gap: 32px;
   }
 
   .scroll-text-block h3 {
@@ -754,6 +699,10 @@ h4 { font-size: 18px; font-weight: 700; line-height: 1.4; }
 
   .scroll-text-block p {
     font-size: 15px;
+  }
+
+  .stat-card {
+    padding: 32px 28px;
   }
 
   .stat-card-value {
