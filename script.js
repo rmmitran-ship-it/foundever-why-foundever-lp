@@ -326,3 +326,45 @@ if (track) {
     else if (action === 'retake') retake();
   });
 })();
+
+// ===== SCROLL-SYNCED LAYOUT: Two-Column Sticky Stats =====
+(function() {
+  const textBlocks = document.querySelectorAll('.scroll-text-block');
+  const statFrames = document.querySelectorAll('.stat-card-frame');
+  const progressDots = document.querySelectorAll('.progress-dot');
+
+  if (!textBlocks.length || !statFrames.length) return;
+
+  function updateState(activeBlock) {
+    // Update progress dots
+    progressDots.forEach(dot => dot.classList.remove('active'));
+    const activeDot = document.querySelector(`.progress-dot--${activeBlock}`);
+    if (activeDot) activeDot.classList.add('active');
+
+    // Swap stat card frames
+    statFrames.forEach(frame => frame.classList.remove('active'));
+    const activeFrame = document.querySelector(`.stat-card-frame[data-frame="${activeBlock}"]`);
+    if (activeFrame) activeFrame.classList.add('active');
+  }
+
+  // Create intersection observer
+  const observerOptions = {
+    root: null,
+    rootMargin: '-40% 0px -40% 0px',
+    threshold: 0
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const blockNum = entry.target.dataset.block;
+        updateState(blockNum);
+      }
+    });
+  }, observerOptions);
+
+  textBlocks.forEach(block => observer.observe(block));
+
+  // Set initial state
+  updateState('1');
+})();
