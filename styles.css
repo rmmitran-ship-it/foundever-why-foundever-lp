@@ -611,6 +611,37 @@ h4 { font-size: 18px; font-weight: 700; line-height: 1.4; }
   margin: 0;
 }
 
+.scroll-block-divider {
+  position: relative;
+  width: 60px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.scroll-block-divider::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, var(--purple), var(--purple-light));
+  transform: translateX(-50%);
+}
+
+.scroll-block-divider::after {
+  content: '→';
+  position: relative;
+  font-size: 20px;
+  color: var(--purple);
+  font-weight: 700;
+  z-index: 1;
+}
+
 .scroll-block-visual {
   display: flex;
   justify-content: center;
